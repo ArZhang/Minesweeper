@@ -241,7 +241,7 @@ public class MSButton
 
         else if(countBombs(r,c)>0)
         {
-            String bombnums = Integer.toString(countBombs((int)(y)/20,(int)(x)/20));
+            String bombnums = ""+(countBombs((int)(y)/20,(int)(x)/20));
             setLabel(bombnums);
         }
 
