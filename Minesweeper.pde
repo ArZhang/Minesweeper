@@ -56,7 +56,6 @@ public void setBombs()
             int r=(int)(Math.random()*20);
             int c=(int)(Math.random()*20);
             bombs.add(buttons[r][c]);
-            System.out.println(r+"," +c);
         }
 }
  
