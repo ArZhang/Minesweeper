@@ -35,13 +35,23 @@ void setup ()
     //         buttons[i][n].setLabel(bombnums);
     //     }
     // }
-   
+
+   for(int i=0;i<20;i++)
+    {
+         for(int n=0;n<20;n++)
+         {
+             String bombnums = Integer.toString(buttons[i][n].countBombs(i,n));
+             buttons[i][n].setLabel(bombnums);
+         }
+     }
+
+
 }
 public void setBombs()
 {
      bombs=new ArrayList <MSButton>();
 
-        for(int n=0;n<3;n++)
+        for(int n=0;n<16;n++)
         {
             int r=(int)(Math.random()*20);
             int c=(int)(Math.random()*20);
@@ -53,14 +63,7 @@ public void setBombs()
 
 public void draw ()
 {
-    for(int i=0;i<20;i++)
-    {
-         for(int n=0;n<20;n++)
-         {
-             String bombnums = Integer.toString(buttons[i][n].countBombs(i,n));
-             buttons[i][n].setLabel(bombnums);
-         }
-     }
+    
      
     
     if(isWon())
@@ -68,16 +71,17 @@ public void draw ()
         displayWinningMessage();
     }
     //displayLosingMessage();
-    for(int r=0;r<20;r++)
-    {
-        for(int c=0;c<20;c++)
-        {
-            if(buttons[r][c].isClicked()==true&&bombs.contains(buttons[r][c])&&buttons[r][c].isMarked()==false)
-            {
-                displayLosingMessage();
-            }
-        }
-    }
+    
+    // for(int r=0;r<20;r++)
+    // {
+    //     for(int c=0;c<20;c++)
+    //     {
+    //         if(buttons[r][c].isClicked()==true&&bombs.contains(buttons[r][c])&&buttons[r][c].isMarked()==false)
+    //         {
+    //             displayLosingMessage();
+    //         }
+    //     }
+    // }
      
 }
 public boolean isWon()
