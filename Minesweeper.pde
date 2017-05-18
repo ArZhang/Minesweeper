@@ -40,7 +40,7 @@ void setup ()
     {
          for(int n=0;n<20;n++)
          {
-             String bombnums = Integer.toString(buttons[i][n].countBombs(i,n));
+             String bombnums = ""+(buttons[i][n].countBombs(i,n));
              buttons[i][n].setLabel(bombnums);
          }
      }
@@ -71,7 +71,7 @@ public void draw ()
         displayWinningMessage();
     }
     //displayLosingMessage();
-    
+
     // for(int r=0;r<20;r++)
     // {
     //     for(int c=0;c<20;c++)
